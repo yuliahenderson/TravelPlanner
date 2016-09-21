@@ -14,7 +14,7 @@
 
 - delete data
 
-- mayby a 'join' button, so friends can join or comments section
+- maybe a 'join' button, so friends can join or comments section
 
 ##Technologies
 
