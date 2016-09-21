@@ -12,7 +12,9 @@
 
 - update the data 
 
-- mayby a 'join' button, so friends can join
+- delete data
+
+- mayby a 'join' button, so friends can join or comments section
 
 ##Technologies
 
