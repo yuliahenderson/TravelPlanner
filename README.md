@@ -2,11 +2,15 @@
 
 ##Project MVP
 
-- travel planner/ travel organizer 
+ travel planner/ travel organizer 
 
-- the user will be able to register , login/logout to his account 
+ the user will be able to:
 
-- the user will be able to input travel dates/destination/length of stay/
+- register , login/logout to his account 
+
+- input travel dates/destination/length of stay
+
+- update the data 
 
 - mayby a 'join' button, so friends can join
 
