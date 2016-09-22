@@ -18,3 +18,11 @@ body {
 h1 {
   letter-spacing: 7px;
 }
+
+h2 {
+  letter-spacing: 2px;
+  text-align: center;
+  font-weight: normal;
+  margin: 2em;
+  color: #FFFFFF;
+}
