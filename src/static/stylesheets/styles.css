@@ -26,3 +26,26 @@ h2 {
   margin: 2em;
   color: #FFFFFF;
 }
+input {
+  text-align: center;
+  width: 150%;
+  display: inline-block;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+}
+
+#login-form {
+  position: absolute;
+  top: 1em;
+  margin-left: 40%;
+  margin-top: 10%;
+}
+#register-form {
+  position: absolute;
+  top: 1em;
+  margin-left: 40%;
+  margin-top: 10%;
+}
+.button {
+  margin-left: 60%;
+}
