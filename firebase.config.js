@@ -5,7 +5,7 @@
     authDomain: "travel-planner-65a26.firebaseapp.com",
     databaseURL: "https://travel-planner-65a26.firebaseio.com",
     storageBucket: "travel-planner-65a26.appspot.com",
-    messagingSenderId: "1048192343473"
+    messagingSenderId: "1048192343473",
   };
   firebase.initializeApp(config);
 
