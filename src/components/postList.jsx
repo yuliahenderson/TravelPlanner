@@ -3,6 +3,8 @@ import Post from './post.jsx';
 
 const propTypes = {
   posts: React.PropTypes.array.isRequired,
+  handlePublish: React.PropTypes.func,
+  handleDelete: React.PropTypes.func,
 };
 
 class PostList extends Component {
@@ -11,9 +13,11 @@ class PostList extends Component {
       return (
         <li key={idx}>
           <Post
-            date={post.date}
+            handleDelete={this.props.handleDelete}
+            handlePublish={this.props.handlePublish}
+            dateTo={post.dateTo}
+            dateBack={post.dateBack}
             destination={post.destination}
-            daysOfStay={post.daysOfStay}
             id={post.id}
           />
         </li>
