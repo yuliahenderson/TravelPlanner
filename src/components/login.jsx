@@ -23,13 +23,17 @@ class Login extends Component {
     firebase.auth()
       .signInWithEmailAndPassword(username, password)
       .catch((err) => {
-        const errorCode = err.code;
-        const errorMessage = err.message;
-        console.log(err)
+        console.log(err);
+      })
+      .then((user) => {
+        firebase.database().ref('users')
+                .child(user.uid)
+                .set({ email: username });
       })
       .then(() => {
-        this.props.router.push('/userboard');
-      })
+        const userId = firebase.auth().currentUser.uid;
+        this.props.router.push(`/${userId}`);
+      });
       console.log(firebase.auth().currentUser);
   }
   render() {
