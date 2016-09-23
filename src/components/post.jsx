@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// import JoinButton from './joinButton.jsx';
 
 const propTypes = {
   dateTo: React.PropTypes.string,
