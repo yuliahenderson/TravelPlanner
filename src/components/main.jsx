@@ -7,7 +7,7 @@ const propTypes = {
 };
 
 class Main extends Component {
-  constructor(){
+  constructor() {
     super();
     this.state = {
       loggedIn: false,
