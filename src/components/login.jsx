@@ -30,6 +30,7 @@ class Login extends Component {
       .then(() => {
         this.props.router.push('/userboard');
       })
+      console.log(firebase.auth().currentUser);
   }
   render() {
     return (
