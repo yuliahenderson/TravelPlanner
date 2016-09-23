@@ -14,7 +14,7 @@ const Routes = () => {
         <IndexRoute component={Homepage} />
         <Route path="register" component={Register} />
         <Route path="login" component={Login} />
-        <Route path="userboard" component={Userboard} onEnter={requireAuth}/>
+        <Route path="id/userboard" component={Userboard} onEnter={requireAuth} />
       </Route>
     </Router>
   );
