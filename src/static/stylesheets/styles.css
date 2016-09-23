@@ -49,3 +49,7 @@ input {
 .button {
   margin-left: 60%;
 }
+form.post-view {
+  width: 50%;
+  display: inline-block;
+}
