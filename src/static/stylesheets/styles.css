@@ -32,6 +32,8 @@ input {
   display: inline-block;
   padding-bottom: 1em;
   margin-bottom: 1em;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
 }
 
 #login-form {
@@ -50,6 +52,39 @@ input {
   margin-left: 60%;
 }
 form.post-view {
-  width: 50%;
+  width: 70%;
   display: inline-block;
 }
+input[name="dateTo"] {
+  width: 21%;
+  display: inline-block;
+  text-align: center;
+  margin: 0.5em;
+}
+input[name="dateBack"] {
+  width: 21%;
+  display: inline-block;
+  text-align: center;
+  margin: 0.5em;
+}
+input[name="destination"] {
+  width: 50%;
+  display: inline-block;
+  text-align: center;
+  margin: 0.5em
+}
+input[type="submit"] {
+  width: 10%;
+  display: none;
+
+}
+ul {
+  list-style: none;
+}
+div.not-saved {
+  margin-left: 2.5em;
+}
+.active-buttons {
+  display: inline-block;
+}
+
