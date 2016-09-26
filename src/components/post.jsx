@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import JoinButton from './joinButton.jsx';
+import JoinButton from './joinButton.jsx';
 
 const propTypes = {
   dateTo: React.PropTypes.string,
@@ -7,6 +7,7 @@ const propTypes = {
   destination: React.PropTypes.string,
   handlePublish: React.PropTypes.func,
   handleDelete: React.PropTypes.func,
+  joinCount: React.PropTypes.number,
   id: React.PropTypes.string,
 };
 
@@ -23,6 +24,7 @@ class Post extends Component {
     this.handleEditOfDestination = this.handleEditOfDestination.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleDeleteClick = this.handleDeleteClick.bind(this);
+    this.handleJoinClick = this.handleJoinClick.bind(this);
     this.isSaved = this.isSaved.bind(this);
   }
   componentWillReceiveProps(nextProps) {
@@ -62,7 +64,20 @@ class Post extends Component {
   }
   handleDeleteClick() {
     this.props.handleDelete(this.props.id);
+    console.log('delete!');
   }
+  handleJoinClick() {
+    let localJoinCount = this.props.joinCount;
+    localJoinCount += 1;
+    this.props.handlePublish({
+      joinCount: localJoinCount,
+      id: this.props.id,
+      dateTo: this.state.localDateTo,
+      dateBack: this.state.localDateBack,
+      destination: this.state.localDestination,
+    });
+  }
+
   isSaved() {
     return this.props.dateTo === this.state.localDateTo &&
            this.props.destination === this.state.localDestination &&
@@ -74,6 +89,10 @@ class Post extends Component {
       activeButtons = (
         <div className="active-buttons">
           <button onClick={this.handleDeleteClick}>x</button>
+          <JoinButton
+            handleJoinClick={this.handleJoinClick}
+            joinCount={this.props.joinCount}
+          />
         </div>
       );
     }
