@@ -20,7 +20,7 @@ class Userboard extends Component {
     this.httpGetPosts();
   }
   httpGetPosts() {
-    const userId = firebase.auth().currentUser.uid;
+    const userId = this.props.params.uid || firebase.auth().currentUser.uid;
     const url = `https://travel-planner-65a26.firebaseio.com/users/${userId}/posts.json`;
     request.get(url)
            .then((response) => {
@@ -49,7 +49,7 @@ class Userboard extends Component {
     }
   }
   httpDeletePost(id) {
-    const userId = firebase.auth().currentUser.uid;
+    const userId = this.props.params.uid || firebase.auth().currentUser.uid;
     const url = `https://travel-planner-65a26.firebaseio.com/users/${userId}/posts/${id}.json`;
     request.del(url)
            .then(() => {
@@ -57,7 +57,7 @@ class Userboard extends Component {
            });
   }
   httpUpdatePost({ id, dateTo, dateBack, destination, joinCount }) {
-    const userId = firebase.auth().currentUser.uid;
+    const userId = this.props.params.uid || firebase.auth().currentUser.uid;
     const url = `https://travel-planner-65a26.firebaseio.com/users/${userId}/posts/${id}.json`;
     request.patch(url)
            .send({ dateTo, dateBack, destination, joinCount })
@@ -66,7 +66,7 @@ class Userboard extends Component {
            });
   }
   httpPublishPost({ dateTo, dateBack, destination }) {
-    const userId = firebase.auth().currentUser.uid;
+    const userId = this.props.params.uid || firebase.auth().currentUser.uid;
     const url = `https://travel-planner-65a26.firebaseio.com/users/${userId}/posts.json`;
     request.post(url)
            .send({ dateTo, dateBack, destination, joinCount: 0 })
