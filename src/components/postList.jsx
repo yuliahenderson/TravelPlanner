@@ -25,9 +25,12 @@ class PostList extends Component {
       );
     });
     return (
-      <ul>
-        {postElements}
-      </ul>
+      <div>
+        <h4>My trips: </h4>
+        <ul>
+          {postElements}
+        </ul>
+      </div>
     );
   }
 }
