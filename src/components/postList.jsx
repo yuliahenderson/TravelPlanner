@@ -18,6 +18,7 @@ class PostList extends Component {
             dateTo={post.dateTo}
             dateBack={post.dateBack}
             destination={post.destination}
+            joinCount={post.joinCount}
             id={post.id}
           />
         </li>
