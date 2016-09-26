@@ -45,6 +45,21 @@ h2 {
   margin: 2em;
   color: #FFFFFF;
 }
+h3 {
+  font-size: 1.2em;
+  letter-spacing: 2px;
+  font-weight: normal;
+  margin-left: 2.7em;
+  margin-top: 3em;
+  color: #FFFFFF;
+  float: left;
+}
+.ticket-icon {
+  width: 64px;
+  height: 64px;
+  margin-top: 2.5em;
+  margin-left: 1em;
+}
 input {
   text-align: center;
   width: 150%;
@@ -106,6 +121,7 @@ ul {
 }
 div.not-saved {
   margin-left: 2.5em;
+  margin-top: 1em;
 }
 .active-buttons {
   display: inline-block;
@@ -126,7 +142,12 @@ button {
   letter-spacing: 1px;
   border-radius: 5px;
   padding: 0.6em;
-  background-color: #FFFFFF;
+  background-color: #8dcea8;
   cursor: pointer;
+}
+.journal-icon {
+  position: absolute;
+  left: 20%;
+  z-index: -1;
 }
 
