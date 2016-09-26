@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import request from 'superagent';
 import PostList from './postList.jsx';
 import Post from './post.jsx';
+import firebase from '../../firebase.config.js';
 
 
 class Userboard extends Component {
@@ -19,7 +20,8 @@ class Userboard extends Component {
     this.httpGetPosts();
   }
   httpGetPosts() {
-    const url = 'https://travel-planner-65a26.firebaseio.com/posts.json';
+    const userId = firebase.auth().currentUser.uid;
+    const url = `https://travel-planner-65a26.firebaseio.com/users/${userId}/posts.json`;
     request.get(url)
            .then((response) => {
              const postsData = response.body;
@@ -32,38 +34,42 @@ class Userboard extends Component {
                    dateTo: individualPostData.dateTo,
                    dateBack: individualPostData.dateBack,
                    destination: individualPostData.destination,
+                   joinCount: individualPostData.joinCount,
                  };
                });
              }
              this.setState({ posts });
            });
   }
-  handlePublish({ id, dateTo, dateBack, destination }) {
+  handlePublish({ id, dateTo, dateBack, destination, joinCount }) {
     if (id) {
-      this.httpUpdatePost({ id, dateTo, dateBack, destination });
+      this.httpUpdatePost({ id, dateTo, dateBack, destination, joinCount });
     } else {
-      this.httpPublishPost({ dateTo, dateBack, destination });
+      this.httpPublishPost({ dateTo, dateBack, destination, joinCount });
     }
   }
   httpDeletePost(id) {
-    const url = `https://travel-planner-65a26.firebaseio.com/posts${id}.json`;
+    const userId = firebase.auth().currentUser.uid;
+    const url = `https://travel-planner-65a26.firebaseio.com/users/${userId}/posts${id}.json`;
     request.del(url)
            .then(() => {
              this.httpGetPosts();
            });
   }
-  httpUpdatePost({ id, dateTo, dateBack, destination }) {
-    const url = `https://travel-planner-65a26.firebaseio.com/posts${id}.json`;
+  httpUpdatePost({ id, dateTo, dateBack, destination, joinCount }) {
+    const userId = firebase.auth().currentUser.uid;
+    const url = `https://travel-planner-65a26.firebaseio.com/users/${userId}/posts${id}.json`;
     request.patch(url)
-           .send({ dateTo, dateBack, destination })
+           .send({ dateTo, dateBack, destination, joinCount })
            .then(() => {
              this.httpGetPosts();
            });
   }
   httpPublishPost({ dateTo, dateBack, destination }) {
-    const url = 'https://travel-planner-65a26.firebaseio.com/posts.json';
+    const userId = firebase.auth().currentUser.uid;
+    const url = `https://travel-planner-65a26.firebaseio.com/users/${userId}/posts.json`;
     request.post(url)
-           .send({ dateTo, dateBack, destination })
+           .send({ dateTo, dateBack, destination, joinCount: 0 })
            .then(() => {
              this.httpGetPosts();
            });
