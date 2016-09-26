@@ -6,6 +6,8 @@ import Register from '../components/register.jsx';
 import Login from '../components/login.jsx';
 import Userboard from '../components/userboard.jsx';
 import requireAuth from '../auth.js';
+import PostList from '../components/postList.jsx';
+import Post from '../components/post.jsx';
 
 const Routes = () => {
   return (
@@ -14,7 +16,10 @@ const Routes = () => {
         <IndexRoute component={Homepage} />
         <Route path="register" component={Register} />
         <Route path="login" component={Login} />
-        <Route path="id/userboard" component={Userboard} onEnter={requireAuth} />
+        <Route path=":uid" component={Userboard} onEnter={requireAuth}>
+          <Route path="postList" component={PostList} onEnter={requireAuth} />
+          <Route path="post" component={Post} onEnter={requireAuth} />
+        </Route>
       </Route>
     </Router>
   );
