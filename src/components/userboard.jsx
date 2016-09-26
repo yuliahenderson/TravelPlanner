@@ -50,7 +50,7 @@ class Userboard extends Component {
   }
   httpDeletePost(id) {
     const userId = firebase.auth().currentUser.uid;
-    const url = `https://travel-planner-65a26.firebaseio.com/users/${userId}/posts${id}.json`;
+    const url = `https://travel-planner-65a26.firebaseio.com/users/${userId}/posts/${id}.json`;
     request.del(url)
            .then(() => {
              this.httpGetPosts();
@@ -58,7 +58,7 @@ class Userboard extends Component {
   }
   httpUpdatePost({ id, dateTo, dateBack, destination, joinCount }) {
     const userId = firebase.auth().currentUser.uid;
-    const url = `https://travel-planner-65a26.firebaseio.com/users/${userId}/posts${id}.json`;
+    const url = `https://travel-planner-65a26.firebaseio.com/users/${userId}/posts/${id}.json`;
     request.patch(url)
            .send({ dateTo, dateBack, destination, joinCount })
            .then(() => {
