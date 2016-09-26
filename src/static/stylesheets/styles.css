@@ -54,6 +54,15 @@ h3 {
   color: #FFFFFF;
   float: left;
 }
+h4 {
+  font-size: 1.2em;
+  letter-spacing: 2px;
+  font-weight: normal;
+  color: #FFFFFF;
+  margin-left: 2.7em;
+  margin-bottom: 0;
+
+}
 .ticket-icon {
   width: 64px;
   height: 64px;
