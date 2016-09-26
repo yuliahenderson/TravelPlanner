@@ -27274,7 +27274,7 @@
 	          { id: 'content' },
 	          this.props.children
 	        ),
-	        _react2.default.createElement('img', { className: 'journal-icon', src: './images/journal.png' })
+	        _react2.default.createElement('img', { className: 'journal-icon', src: '/images/journal.png' })
 	      );
 	    }
 	  }]);
@@ -27972,7 +27972,7 @@
 	    _react2.default.createElement(
 	      "div",
 	      { className: "photo" },
-	      _react2.default.createElement("img", { className: "main-image", src: "./images/travel.png" })
+	      _react2.default.createElement("img", { className: "main-image", src: "/images/travel.png" })
 	    )
 	  );
 	};
@@ -28271,7 +28271,7 @@
 	    value: function httpGetPosts() {
 	      var _this2 = this;
 	
-	      var userId = _firebaseConfig2.default.auth().currentUser.uid;
+	      var userId = this.props.params.uid || _firebaseConfig2.default.auth().currentUser.uid;
 	      var url = 'https://travel-planner-65a26.firebaseio.com/users/' + userId + '/posts.json';
 	      _superagent2.default.get(url).then(function (response) {
 	        var postsData = response.body;
@@ -28311,7 +28311,7 @@
 	    value: function httpDeletePost(id) {
 	      var _this3 = this;
 	
-	      var userId = _firebaseConfig2.default.auth().currentUser.uid;
+	      var userId = this.props.params.uid || _firebaseConfig2.default.auth().currentUser.uid;
 	      var url = 'https://travel-planner-65a26.firebaseio.com/users/' + userId + '/posts/' + id + '.json';
 	      _superagent2.default.del(url).then(function () {
 	        _this3.httpGetPosts();
@@ -28328,7 +28328,7 @@
 	      var destination = _ref2.destination;
 	      var joinCount = _ref2.joinCount;
 	
-	      var userId = _firebaseConfig2.default.auth().currentUser.uid;
+	      var userId = this.props.params.uid || _firebaseConfig2.default.auth().currentUser.uid;
 	      var url = 'https://travel-planner-65a26.firebaseio.com/users/' + userId + '/posts/' + id + '.json';
 	      _superagent2.default.patch(url).send({ dateTo: dateTo, dateBack: dateBack, destination: destination, joinCount: joinCount }).then(function () {
 	        _this4.httpGetPosts();
@@ -28343,7 +28343,7 @@
 	      var dateBack = _ref3.dateBack;
 	      var destination = _ref3.destination;
 	
-	      var userId = _firebaseConfig2.default.auth().currentUser.uid;
+	      var userId = this.props.params.uid || _firebaseConfig2.default.auth().currentUser.uid;
 	      var url = 'https://travel-planner-65a26.firebaseio.com/users/' + userId + '/posts.json';
 	      _superagent2.default.post(url).send({ dateTo: dateTo, dateBack: dateBack, destination: destination, joinCount: 0 }).then(function () {
 	        _this5.httpGetPosts();
@@ -28361,7 +28361,7 @@
 	          null,
 	          'What is your next trip?'
 	        ),
-	        _react2.default.createElement('img', { className: 'ticket-icon', src: './images/ticket.png' }),
+	        _react2.default.createElement('img', { className: 'ticket-icon', src: '/images/ticket.png' }),
 	        _react2.default.createElement(_post2.default, { handleDelete: this.httpDeletePost, handlePublish: this.handlePublish })
 	      );
 	    }
