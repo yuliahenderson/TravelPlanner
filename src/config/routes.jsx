@@ -17,8 +17,8 @@ const Routes = () => {
         <Route path="register" component={Register} />
         <Route path="login" component={Login} />
         <Route path=":uid" component={Userboard} onEnter={requireAuth}>
-          <Route path="postList" component={PostList} onEnter={requireAuth} />
-          <Route path="post" component={Post} onEnter={requireAuth} />
+          <Route path="postList" component={PostList} />
+          <Route path="post" component={Post} />
         </Route>
       </Route>
     </Router>
