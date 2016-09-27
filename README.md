@@ -1,6 +1,6 @@
 # TravelPlanner:
 
-This app is a simple CRUD app created to simplify sharing your travel itinerary with friends. Implemented using **JavaScript**, **React Framework**, **HTML** & **CSS**.
+This app is a simple CRUD app created to simplify sharing your travel itinerary with friends. Implemented using **JavaScript**, **React Framework**, **Firebase**, **HTML** & **CSS**.
 
 ![alt text](screen-shot-homepage.png "homepage screen-shot")
 ![alt text](screen-shot-login.png "login/register page screen-shot")
