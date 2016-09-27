@@ -58,7 +58,7 @@ class Main extends Component {
         <div id="content">
           {this.props.children}
         </div>
-         <img className="journal-icon" src='TravelPlanner/Images/journal.png' />
+         <img className="journal-icon" src='./Images/journal.png' />
       </div>
     );
   }
