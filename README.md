@@ -8,14 +8,14 @@ This app is a simple CRUD app created to simplify sharing your travel itinerary 
 
 # How to use the app:
 
-- In order to use the app you need to register, using your e-mail address and creating a password.
+- In order to use the app, you need to register using your e-mail address and to create a password.
 
-- After the registration you'll be redirected to the userboard
+- After the registration, you'll be redirected to the userboard.
 
-- You'll be able to choose the dates of your trip and destination 
+- You'll be able to choose both the dates of your trip and the destination. 
 
-- Once you filled in all the inputs, press 'Enter' and your trip will appear under "My trips" section
+- Once you have filled in all the entry fields press 'Enter,' and your trip will appear under the "My trips" section.
 
-- You can edit or delete your trips later
+- You can edit or delete your trips later.
 
-- You can share the link to your profile with friends and let them 'Join' your trip
+- You can share the link to your profile with friends and let them 'Join' your trip(s).
