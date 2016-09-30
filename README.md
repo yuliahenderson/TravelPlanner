@@ -1,34 +1,21 @@
-# TravelPlanner
+# TravelPlanner:
 
-##Project MVP
+This app is a simple CRUD app created to simplify sharing your travel itinerary with friends. Implemented using **JavaScript**, **React Framework**, **Firebase**, **HTML** & **CSS**.
 
- travel planner/ travel organizer 
+![alt text](screen-shot-homepage.png "homepage screen-shot")
+![alt text](screen-shot-login.png "login/register page screen-shot")
+![alt text](screen-shot-userboard.png "userboard screen-shot")
 
- the user will be able to:
+# How to use the app:
 
-- register , login/logout to his account 
+- In order to use the app, you need to register using your e-mail address and to create a password.
 
-- input travel dates/destination/length of stay
+- After the registration, you'll be redirected to the userboard.
 
-- update the data 
+- You'll be able to choose both the dates of your trip and the destination. 
 
-- delete data
+- Once you have filled in all the entry fields press 'Enter,' and your trip will appear under the "My trips" section.
 
-- maybe a 'join' button, so friends can join or comments section
+- You can edit or delete your trips later.
 
-##Technologies
-
-- React
-- firebase
-
-##Next Steps
-
-- create a mockup
-
-- define react components, which one is responsible for what
-
-##Bonuses
-
-google maps API ? 
-
-other maps CORS API?
+- You can share the link to your profile with friends and let them 'Join' your trip(s).
