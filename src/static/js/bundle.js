@@ -27274,7 +27274,7 @@
 	          { id: 'content' },
 	          this.props.children
 	        ),
-	        _react2.default.createElement('img', { className: 'journal-icon', src: '/images/journal.png' })
+	        _react2.default.createElement('img', { className: 'journal-icon', src: 'journal.png' })
 	      );
 	    }
 	  }]);
@@ -27972,7 +27972,7 @@
 	    _react2.default.createElement(
 	      "div",
 	      { className: "photo" },
-	      _react2.default.createElement("img", { className: "main-image", src: "/images/travel.png" })
+	      _react2.default.createElement("img", { className: "main-image", src: "travel.png" })
 	    )
 	  );
 	};
@@ -28361,7 +28361,7 @@
 	          null,
 	          'What is your next trip?'
 	        ),
-	        _react2.default.createElement('img', { className: 'ticket-icon', src: '/images/ticket.png' }),
+	        _react2.default.createElement('img', { className: 'ticket-icon', src: 'ticket.png' }),
 	        _react2.default.createElement(_post2.default, { handleDelete: this.httpDeletePost, handlePublish: this.handlePublish })
 	      );
 	    }
