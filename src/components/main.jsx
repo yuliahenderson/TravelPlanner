@@ -58,7 +58,7 @@ class Main extends Component {
         <div id="content">
           {this.props.children}
         </div>
-         <img className="journal-icon" src='TravelPlanner/tree/gh-pages/images/journal.png' />
+         <img className="journal-icon" src='TravelPlanner/tree/gh-pages/src/static/Images/journal.png' />
       </div>
     );
   }
