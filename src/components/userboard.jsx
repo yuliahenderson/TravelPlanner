@@ -80,7 +80,7 @@ class Userboard extends Component {
       <div>
         <PostList handleDelete={this.httpDeletePost} handlePublish={this.handlePublish} posts={this.state.posts} />
         <h3>What is your next trip?</h3>
-          <img className="ticket-icon" src='../static/images/ticket.png' />
+          <img className="ticket-icon" src='images/ticket.png' />
         <Post handleDelete={this.httpDeletePost} handlePublish={this.handlePublish} />
       </div>
     );
